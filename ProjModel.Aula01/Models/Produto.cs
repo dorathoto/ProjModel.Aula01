@@ -11,7 +11,7 @@ namespace ProjModel.Aula01.Models
         public string Nome { get; set; }
 
         [Required]
-       // [Range(0.01, double.MaxValue)] //Falha bastante para PT-BR teria que fazer um validador separado
+        [Range(0.01, double.MaxValue)] 
         public decimal Preco { get; set; }
 
         [Required]
