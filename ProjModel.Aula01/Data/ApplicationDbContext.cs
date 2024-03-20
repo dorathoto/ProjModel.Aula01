@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ProjModel.Aula01.Models;
 
 namespace ProjModel.Aula01.Data
 {
@@ -9,5 +10,8 @@ namespace ProjModel.Aula01.Data
             : base(options)
         {
         }
+
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
     }
 }
