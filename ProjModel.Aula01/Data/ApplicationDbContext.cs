@@ -4,7 +4,7 @@ using ProjModel.Aula01.Models;
 
 namespace ProjModel.Aula01.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Usuario>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

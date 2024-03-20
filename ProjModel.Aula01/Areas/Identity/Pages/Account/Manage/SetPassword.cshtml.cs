@@ -13,12 +13,12 @@ namespace ProjModel.Aula01.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ProjModel.Aula01.Models.Usuario> _userManager;
+        private readonly SignInManager<ProjModel.Aula01.Models.Usuario> _signInManager;
 
         public SetPasswordModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            UserManager<ProjModel.Aula01.Models.Usuario> userManager,
+            SignInManager<ProjModel.Aula01.Models.Usuario> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

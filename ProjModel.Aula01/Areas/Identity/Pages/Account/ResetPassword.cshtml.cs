@@ -16,9 +16,9 @@ namespace ProjModel.Aula01.Areas.Identity.Pages.Account
 {
     public class ResetPasswordModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ProjModel.Aula01.Models.Usuario> _userManager;
 
-        public ResetPasswordModel(UserManager<IdentityUser> userManager)
+        public ResetPasswordModel(UserManager<ProjModel.Aula01.Models.Usuario> userManager)
         {
             _userManager = userManager;
         }

@@ -12,18 +12,19 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using ProjModel.Aula01.Models;
 
 namespace ProjModel.Aula01.Areas.Identity.Pages.Account.Manage
 {
     public class EmailModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ProjModel.Aula01.Models.Usuario> _userManager;
+        private readonly SignInManager<ProjModel.Aula01.Models.Usuario> _signInManager;
         private readonly IEmailSender _emailSender;
 
         public EmailModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<ProjModel.Aula01.Models.Usuario> userManager,
+            SignInManager<ProjModel.Aula01.Models.Usuario> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -73,7 +74,7 @@ namespace ProjModel.Aula01.Areas.Identity.Pages.Account.Manage
             public string NewEmail { get; set; }
         }
 
-        private async Task LoadAsync(IdentityUser user)
+        private async Task LoadAsync(Usuario user)
         {
             var email = await _userManager.GetEmailAsync(user);
             Email = email;

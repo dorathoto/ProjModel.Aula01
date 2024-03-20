@@ -17,10 +17,10 @@ namespace ProjModel.Aula01.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterConfirmationModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ProjModel.Aula01.Models.Usuario> _userManager;
         private readonly IEmailSender _sender;
 
-        public RegisterConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender sender)
+        public RegisterConfirmationModel(UserManager<ProjModel.Aula01.Models.Usuario> userManager, IEmailSender sender)
         {
             _userManager = userManager;
             _sender = sender;
